@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASPNET", "ASPNET", "{E5E344ED-BA8C-4932-B1B4-2FBC103E3C7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.JWT.Auth", "WebAPI.JWT.Auth\WebAPI.JWT.Auth.csproj", "{B525D2BF-226B-42DB-B0CD-BE12583E716C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JWTAuth", "JWTAuth", "{BBA35376-20A5-4D48-A153-3A9B0CD84731}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B525D2BF-226B-42DB-B0CD-BE12583E716C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B525D2BF-226B-42DB-B0CD-BE12583E716C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B525D2BF-226B-42DB-B0CD-BE12583E716C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B525D2BF-226B-42DB-B0CD-BE12583E716C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B525D2BF-226B-42DB-B0CD-BE12583E716C} = {BBA35376-20A5-4D48-A153-3A9B0CD84731}
+		{BBA35376-20A5-4D48-A153-3A9B0CD84731} = {E5E344ED-BA8C-4932-B1B4-2FBC103E3C7B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC2D1EB7-F532-45D0-BC3A-FDE7FBF79891}
