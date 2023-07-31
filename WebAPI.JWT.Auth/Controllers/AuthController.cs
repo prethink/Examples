@@ -198,9 +198,19 @@ namespace WebAPI.JWT.Auth.Controllers
 
                 var user = await _userManager.FindByNameAsync(username);
 
-                if (user == null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.Now)
+                if (user == null)
                 {
-                    return BadRequest("Invalid access token or refresh token");
+                    return NotFound($"Не найден пользователь {username}");
+                }
+
+                if (user.RefreshToken != refreshToken)
+                {
+                    return BadRequest("RefreshToken не валидный");
+                }
+
+                if (user.RefreshTokenExpiryTime <= DateTime.Now)
+                {
+                    return BadRequest("Срок refreshToken истек");
                 }
                 var claims = await _jwt.GetClaimByUser(user, _userManager);
                 var newAccessToken = _jwt.CreateToken(claims);
